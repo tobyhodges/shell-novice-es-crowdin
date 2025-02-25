@@ -1,23 +1,23 @@
 ---
-title: Introducing the Shell
+title: Introducción al Shell
 teaching: 5
 exercises: 0
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how the shell relates to the keyboard, the screen, the operating system, and users' programs.
-- Explain when and why command-line interfaces should be used instead of graphical interfaces.
+- Explicar cómo se relaciona el Shell con el teclado, la pantalla, el sistema operativo y los programas de los usuarios.
+- Explicar cuándo y por qué las interfaces de línea de comandos deben ser usadas en lugar de interfaces gráficas.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- What is a command shell and why would I use one?
+- ¿Qué es un Shell de comandos y por qué utilizaría uno?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Background
+### Información General
 
 Humans and computers commonly interact in many different ways, such as through a keyboard and mouse,
 touch screen interfaces, or using speech recognition systems.
@@ -59,7 +59,7 @@ and we'll cover those essential few today.
 
 The grammar of a shell allows you to combine existing tools into powerful
 pipelines and handle large volumes of data automatically. Sequences of
-commands can be written into a *script*, improving the reproducibility of
+commands can be written into a _script_, improving the reproducibility of
 workflows.
 
 In addition, the command line is often the easiest way to interact with remote machines
@@ -82,7 +82,7 @@ $
 
 The shell typically uses `$ ` as the prompt, but may use a different symbol.
 In the examples for this lesson, we'll show the prompt as `$ `.
-Most importantly, *do not type the prompt* when typing commands.
+Most importantly, _do not type the prompt_ when typing commands.
 Only type the command that follows the prompt.
 This rule applies both in these lessons and in lessons from other sources.
 Also note that after you type a command, you have to press the <kbd>Enter</kbd> key to execute it.
@@ -135,7 +135,6 @@ ks: command not found
 This might happen if the command was mis-typed or if the program corresponding to that command
 is not installed.
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Nelle's Pipeline: A Typical Problem
@@ -149,7 +148,7 @@ She has 1520 samples that she's run through an assay machine to measure the rela
 of 300 proteins.
 She needs to run these 1520 files through an imaginary program called `goostats.sh`.
 In addition to this huge task, she has to write up results by the end of the month, so her paper
-can appear in a special issue of *Aquatic Goo Letters*.
+can appear in a special issue of _Aquatic Goo Letters_.
 
 If Nelle chooses to run `goostats.sh` by hand using a GUI,
 she'll have to select and open a file 1520 times.
@@ -178,8 +177,6 @@ In order to achieve her task, Nelle needs to know how to:
 - iterate over files
 - run a shell script containing her pipeline
 
-
-
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - A shell is a program whose primary purpose is to read commands and run other programs.
@@ -189,5 +186,3 @@ In order to achieve her task, Nelle needs to know how to:
 - A significant challenge when using the shell can be knowing what commands need to be run and how to run them.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

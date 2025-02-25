@@ -16,7 +16,7 @@ exercises: 10
 :::::::::::::::::::::::::::::::::::::::: questions
 
 - How can I combine existing commands to produce a desired output?
-- How can I show only part of the output? 
+- How can I show only part of the output?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -108,9 +108,7 @@ for us to give it some data interactively. From the outside, though, all we
 see is it sitting there, and the command doesn't appear to do anything.
 
 If you make this kind of mistake, you can escape out of this state by
-holding down the control key (<kbd>Ctrl</kbd>) and pressing the letter
-<kbd>C</kbd> once: <kbd>Ctrl</kbd>\+<kbd>C</kbd>. Then release both keys.
-
+holding down the control key (<kbd>Ctrl</kbd>) and pressing the letter <kbd>C</kbd> once: <kbd>Ctrl</kbd>\+<kbd>C</kbd>. Then release both keys.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -173,7 +171,6 @@ This displays a screenful of the file, and then stops.
 You can go forward one screenful by pressing the spacebar,
 or back one by pressing `b`.  Press `q` to quit.
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Filtering output
@@ -223,15 +220,13 @@ Explain why `-n` has this effect.
 
 The `-n` option specifies a numerical rather than an alphanumerical sort.
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 We will also use the `-n` option to specify that the sort is
 numerical instead of alphanumerical.
-This does *not* change the file;
+This does _not_ change the file;
 instead, it sends the sorted result to the screen:
 
 ```bash
@@ -286,7 +281,6 @@ Doing something like this may give you
 incorrect results and/or delete
 the contents of `lengths.txt`.
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::  challenge
@@ -332,8 +326,6 @@ We see from the second example that the `>>` operator also writes 'hello' to a f
 but appends the string to the file if it already exists
 (i.e. when we run it for the second time).
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -368,8 +360,6 @@ For option 1 to be correct we would only run the `head` command.
 For option 2 to be correct we would only run the `tail` command.
 For option 4 to be correct we would have to pipe the output of `head` into `tail -n 2`
 by doing `head -n 3 animals.csv | tail -n 2 > animals-subset.csv`
-
-
 
 :::::::::::::::::::::::::
 
@@ -432,8 +422,8 @@ $ wc -l *.pdb | sort -n | head -n 1
    9  methane.pdb
 ```
 
-This is exactly like a mathematician nesting functions like *log(3x)*
-and saying 'the log of three times *x*'.
+This is exactly like a mathematician nesting functions like _log(3x)_
+and saying 'the log of three times _x_'.
 In our case,
 the algorithm is 'head of sort of line count of `*.pdb`'.
 
@@ -463,8 +453,6 @@ the input of another.
 `>` is used to redirect standard output to a file.
 Try it in the `shell-lesson-data/exercise-data/alkanes` directory!
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -488,7 +476,7 @@ and write to standard output.
 The key is that any program that reads lines of text from standard input
 and writes lines of text to standard output
 can be combined with every other program that behaves this way as well.
-You can *and should* write your programs this way
+You can _and should_ write your programs this way
 so that you and other people can put those programs into pipes to multiply their power.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
@@ -619,8 +607,6 @@ If you have difficulty understanding why, try running the commands, or sub-secti
 the pipelines (make sure you are in the `shell-lesson-data/exercise-data/animal-counts`
 directory).
 
-
-
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -714,7 +700,7 @@ Suppose you want to delete your processed data files, and only keep
 your raw files and processing script to save storage.
 The raw files end in `.dat` and the processed files end in `.txt`.
 Which of the following would remove all the processed data files,
-and *only* the processed data files?
+and _only_ the processed data files?
 
 1. `rm ?.txt`
 2. `rm *.txt`
@@ -726,20 +712,19 @@ and *only* the processed data files?
 ## Solution
 
 1. This would remove `.txt` files with one-character names
+
 2. This is the correct answer
+
 3. The shell would expand `*` to match everything in the current directory,
-  so the command would try to remove all matched files and an additional
-  file called `.txt`
+   so the command would try to remove all matched files and an additional
+   file called `.txt`
+
 4. The shell expands `*.*` to match all filenames containing at least one
-  `.`, including the processed files (`.txt`) *and* raw files (`.dat`)
-  
-  
+   `.`, including the processed files (`.txt`) _and_ raw files (`.dat`)
 
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
@@ -754,5 +739,3 @@ and *only* the processed data files?
 - The best way to use the shell is to use pipes to combine simple single-purpose programs (filters).
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
